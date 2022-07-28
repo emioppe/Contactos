@@ -3,7 +3,7 @@
 
 const guardarContacto = (dataBase, contacto) => {
     dataBase.setItem (contacto.id, JSON.stringify(contacto))
-    window.location.href = '/'
+    window.location.reload()
 }
 
 const cargarContactos = (dataBase, parentNode) => {
@@ -34,7 +34,7 @@ const crearContacto = (ParentNode, contacto, dataBase) => {
 
     iconoBorrar.onclick = () =>{
         dataBase.removeItem(contacto.id)
-        window.location.href = '/'
+        window.location.reload()
     }
 
     divContacto.appendChild(nombreContacto)
